@@ -1,0 +1,152 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  /* overflow: hidden; */
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+#home {
+  background-color: red;
+}
+
+#journey {
+  height: 100%;
+  background-color: rgb(80, 140, 230);
+}
+
+#event {
+  background-color: magenta;
+}
+
+#progress-area {
+  /* float: left; */
+  position: relative;
+  /* width: 400px; */
+  /* margin: 10px; */
+}
+
+#trees {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+#caravan {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+#stats-area {
+  background-color: white;
+  /* float: left; */
+  /* height: 150px; */
+  /* width: 156px; */
+  /* margin: 10px; */
+  /* padding: 10px; */
+  font-size: 14px;
+}
+
+
+
+.stat-value {
+  float: right;
+}
+
+#updates-area {
+  background-color: white;
+  /* float: left; */
+  /* width: 350px; */
+  /* margin: 10px; */
+  /* height: 150px; */
+  /* padding: 10px; */
+  font-size: 12px;
+  overflow-y: scroll;
+}
+
+.update-positive {
+  color: #669966;
+}
+
+.update-negative {
+  color: red;
+}
+
+.update-neutral {
+  color: #90908F;
+}
+
+#shop {
+  /* float: left; */
+  background-color: white;
+  /* margin: 10px; */
+  /* padding: 10px; */
+  /* height: 80px; */
+  /* width: 0px; */
+}
+
+.product {
+  float: left;
+  margin: 5px;
+  padding: 2px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+
+#shop button {
+  clear: both;
+  float: left;
+  margin: 5px;
+}
+
+#attack {
+  float: left;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  /* height: 60px; */
+  /* width: 150px; */
+}
+
+
+#shop{
+  grid-area: s;
+}
+#stats-area {
+  grid-area: t;
+  background-color: lightblue;
+}
+#updates-area {
+  grid-area: u;
+}
+#attack {
+  grid-area: a;
+}
+#progress-area {
+  grid-area: p;
+}
+#journey {
+  display: grid;
+  grid-gap: 0;
+  /* grid-template-columns: repeat(5, 80px); */
+  grid-template-columns: 150px 150px 150px 150px 150px;
+  grid-template-rows: 80px auto 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-template-areas:  "t t a a a"
+                        "t t s s s"
+                        "p p p p p"
+                        "p p p p p"
+                        "u u u u u"
+                        "u u u u u";
+}
